@@ -12,12 +12,15 @@ class _PriceScreenState extends State<PriceScreen> {
   List<DropdownMenuItem> getDropdownItems() {
     List<DropdownMenuItem<String>> dropdownItems = [];
     String currency = '';
-    for (int i = 0; i < currenciesList.length; i++) {
-      currency = currenciesList[i];
+
+    for (String currency in currenciesList) {
+      //for (int i = 0; i < currenciesList.length; i++) {
+      //currency = currenciesList[i];
       var newItem = DropdownMenuItem(
         child: Text(currency),
         value: currency,
       );
+
       dropdownItems.add(newItem);
     }
     return dropdownItems;
